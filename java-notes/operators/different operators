@@ -1,6 +1,6 @@
-1.Arithmetic Operator
+1.Arithmetic Operator(+,-,*,/)
 
-public class GFG{
+public class aruthmetic{
     public static void main(String[] args) {
         int a = 10, b = 3;
         
@@ -24,5 +24,110 @@ public class GFG{
         System.out.println("Multiplication: " + mul);
         System.out.println("Division: " + div);
         System.out.println("Modulus: " + mod);
+    }
+}
+
+//2.Unary Operator(++,--)
+import java.io.*;
+
+// Driver Class
+class unary{
+
+    public static void main(String[] args){
+        
+        // Integer declared
+        int a = 10;
+        int b = 10;
+
+        // Using unary operators
+        System.out.println("Postincrement : " + (a++));
+        System.out.println("Preincrement : " + (++a));
+
+        System.out.println("Postdecrement : " + (b--));
+        System.out.println("Predecrement : " + (--b));
+    }
+}
+
+//3.Assighnment operator(+=,-+,*=,/=,%=) it has right to left associativity
+public class assignment{
+    public static void main(String[] args){
+        
+        int n = 10;
+        
+        // n = n + 5
+        n += 5;  
+        System.out.println("After += : " + n);
+        
+        // n = n * 2
+        n *= 2;  
+        System.out.println("After *= : " + n);
+        
+        // n = n - 5
+        n -= 5;
+        System.out.println("After -= : " + n);
+        
+        // n = n / 2
+        n /= 2;  
+        System.out.println("After /= : " + n);
+        
+        // n = n % 3
+        n %= 3;
+        System.out.println("After %= : " + n);
+    }
+}
+
+4.Relational operator(<,>,>=)for comparision
+
+import java.io.*;
+
+class relational{
+    
+    public static void main(String[] args){
+        
+        // Comparison operators
+        int a = 10;
+        int b = 3;
+        int c = 5;
+
+        System.out.println("a > b: " + (a > b));  //these all gives boolean answer like true or false
+        System.out.println("a < b: " + (a < b));
+        System.out.println("a >= b: " + (a >= b));
+        System.out.println("a <= b: " + (a <= b));
+        System.out.println("a == c: " + (a == c));
+        System.out.println("a != c: " + (a != c));
+    }
+}
+
+5.Logical operator(&&(and),||(OR),!(NOT)
+
+import java.io.*;
+
+class logical {
+  
+      // Main Function
+    public static void main (String[] args) {
+      
+        // Logical operators
+        boolean x = true;
+        boolean y = false;
+      
+        System.out.println("x && y: " + (x && y));  //print false
+        System.out.println("x || y: " + (x || y));  //print true
+        System.out.println("!x: " + (!x));   //print false
+    }
+}
+
+6.Ternary Operator(cond?true:false)
+
+public class Geeks{
+  
+    public static void main(String[] args){
+        
+        int a = 20, b = 10, c = 30, result;
+
+        // result holds max of three
+        // numbers
+        result = ((a > b) ? (a > c) ? a : c : (b > c) ? b : c);
+        System.out.println("Max of three numbers = "+ result);
     }
 }
