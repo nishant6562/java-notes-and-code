@@ -1,0 +1,110 @@
+Bitwise operators operate on each bit of a number individually according to the specified operation.
+When a bitwise operation is applied, the corresponding bits of the operands are evaluated and combined to produce a result.
+
+Operator 
+
+(&) Bitwise AND
+This operator is a binary operator, denoted by '&.'
+It returns bit by bit AND of input values, i.e., if both bits are 1, it gives 1, else it shows 0. 
+
+(|) Bitwise OR
+This operator is a binary operator, denoted by '|'. 
+It returns bit by bit OR of input values, i.e., if either of the bits is 1, it gives 1, else it shows 0. 
+
+(^) Bitwise XOR
+This operator is a binary operator, denoted by '^.' 
+It returns bit by bit XOR of input values, i.e., if corresponding bits are different, it gives 1, else it shows 0. 
+
+(~) Bitwise Complement (NOT
+This operator is a unary operator, denoted by '~.' 
+It returns the one's complement representation of the input value, i.e., with all bits inverted, 
+which means it makes every 0 to 1, and every 1 to 0. 
+
+bitwise complement of N = ~N (represented in 2's complement form)
+2'complement of ~N = -(~(~N)+1)  =  -(N+1). 
+
+(<<) Left Shift
+
+
+(>>) Signed Right Shift
+The signed right shift operator (>>) shifts bits to the right while preserving the sign bit (most significant bit).
+
+If the number is positive, 0 is filled on the left.
+If the number is negative, 1 is filled on the left (sign extension).
+
+(>>>) Unsigned Right Shift
+The unsigned right shift operator (>>>) shifts bits to the right but always fills 0 on the left, regardless of the sign.
+
+Does not preserve the sign bit
+Converts negative numbers into large positive values
+
+//example
+public class Geeks {
+    public static void main(String[] args)
+    {
+        int a = 5;
+        int b = 7;
+
+        // bitwise and
+        // 0101 & 0111=0101 = 5
+        System.out.println("a&b = " + (a & b));//5
+
+        // bitwise or
+        // 0101 | 0111=0111 = 7
+        System.out.println("a|b = " + (a | b));
+
+        // bitwise xor
+        // 0101 ^ 0111=0010 = 2
+        System.out.println("a^b = " + (a ^ b));
+
+        // bitwise not
+        // ~00000000 00000000 00000000 00000101=11111111 11111111 11111111 11111010
+        // will give 2's complement (32 bit) of 5 = -6
+        System.out.println("~a = " + ~a);
+
+        // can also be combined with
+        // assignment operator to provide shorthand
+        // assignment
+        // a=a&b
+        a &= b;
+        System.out.println("a= " + a);//5
+    }
+}
+
+//using bitwise operator print binary number
+
+class bitwise_binary_output {
+    public static void main (String[] args) {
+      
+        String binary[]={
+          "0000","0001","0010","0011","0100","0101",
+          "0110","0111","1000","1001","1010",
+          "1011","1100","1101","1110","1111"
+        };
+      
+      int a=3; // 0+2+1 or 0011 in binary
+      int b=6; // 4+2+0 or 0110 in binary
+      
+      // bitwise or
+      int c= a | b;
+      
+      // bitwise and
+      int d= a & b;
+      
+      // bitwise xor
+      int e= a ^ b;
+      
+      // bitwise not
+      int f= (~a & b)|(a &~b);
+      int g= ~a & 0x0f;
+      
+      
+      System.out.println(" a= "+binary[a]);
+      System.out.println(" b= "+binary[b]);
+      System.out.println(" a|b= "+binary[c]);
+      System.out.println(" a&b= "+binary[d]);
+      System.out.println(" a^b= "+binary[e]);
+      System.out.println("~a & b|a&~b= "+binary[f]);
+      System.out.println("~a= "+binary[g]);
+    }
+}
