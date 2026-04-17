@@ -32,3 +32,66 @@ OUTPUT;- (1,1) (1,2) (1,3)
          (2,1) (2,2) (2,3) 
          (3,1) (3,2) (3,3) 
 
+WHILE LOOP
+class whileLoop {
+    public static void main(String args[])
+    {
+        int i = 1, s = 0;
+
+        // loop continues until i becomes greater than 10
+        while (i <= 10) {
+            
+            // add the current value of i to s
+            s = s + i;
+
+            // increment i for the next iteration
+            i++;
+        }
+        System.out.println("Summation: " + s);
+    }
+}
+
+OPUPUT:- 55
+
+DO-WHILE loop
+
+class GFG {
+    public static void main(String args[])
+    {
+        // Declaring and initialization expression
+        int c = 1;
+
+        // Do-while loop
+        do {
+            // Body of do-while loop
+            // Print statement
+            System.out.println("Hello World");
+
+            // Update expression
+            c++;
+        }
+        // Test expression
+        while (c < 6);
+    }
+}
+
+OUTPUT :- Hello World
+          Hello World
+          Hello World
+          Hello World
+          Hello World
+
+Difference between break and continue:
+              Break                                                                 Continue
+
+Terminates the loop immediately.                               Skips the current iteration and continues with the next one
+
+Transfers control outside the loop.                               Transfers control to the next loop iteration.
+
+Can be used with loops and switch statements.                     Can be used only inside loops.
+
+Stops further execution of the loop body completely.              Skips only the remaining statements in the current iteration.
+
+Can be used with labeled loops.                                   Can also be used with labeled loops.
+
+
